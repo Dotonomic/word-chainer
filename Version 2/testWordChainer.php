@@ -2,8 +2,9 @@
 
 require 'WordChainer.php';
 
+// https://github.com/openai-php/client
 require 'vendor/autoload.php';
-$LLMclient = OpenAI::client('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');
+$LLMclient = OpenAI::client(/* OpenAI API key */);
 $LLM = 'gpt-4-1106-preview';
 
 $WordChainer = new WordChainer($LLMclient,$LLM);
